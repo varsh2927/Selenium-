@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selenium Web Automation Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-robot"></i>
+                    <h1>Selenium Automation Hub</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#dashboard" class="nav-link active">Dashboard</a>
+                    <a href="#automation" class="nav-link">Automation</a>
+                    <a href="#testing" class="nav-link">Testing</a>
+                    <a href="#results" class="nav-link">Results</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="section active">
+                <div class="section-header">
+                    <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
+                    <p>Welcome to your Selenium Web Automation Control Center</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Ready to Run</h3>
+                            <p class="stat-number">5</p>
+                            <p class="stat-desc">Automation scripts available</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Last Success</h3>
+                            <p class="stat-number">98%</p>
+                            <p class="stat-desc">Success rate</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Avg Runtime</h3>
+                            <p class="stat-number">2.3s</p>
+                            <p class="stat-desc">Average execution time</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Tests Today</h3>
+                            <p class="stat-number">24</p>
+                            <p class="stat-desc">Tests executed today</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <h3>Quick Actions</h3>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="runGoogleSearch()">
+                            <i class="fas fa-search"></i>
+                            Google Search Test
+                        </button>
+                        <button class="btn btn-secondary" onclick="runFormTest()">
+                            <i class="fas fa-edit"></i>
+                            Form Automation
+                        </button>
+                        <button class="btn btn-success" onclick="runScreenshot()">
+                            <i class="fas fa-camera"></i>
+                            Take Screenshot
+                        </button>
+                        <button class="btn btn-warning" onclick="runDataExtraction()">
+                            <i class="fas fa-download"></i>
+                            Data Extraction
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Automation Section -->
+            <section id="automation" class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-cogs"></i> Automation Tools</h2>
+                    <p>Configure and run your web automation scripts</p>
+                </div>
+
+                <div class="automation-grid">
+                    <div class="automation-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-globe"></i> Website Navigation</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="url-input">Target URL:</label>
+                                <input type="url" id="url-input" placeholder="https://example.com" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="headless-mode">
+                                    <input type="checkbox" id="headless-mode">
+                                    Run in headless mode
+                                </label>
+                            </div>
+                            <button class="btn btn-primary" onclick="navigateToWebsite()">
+                                <i class="fas fa-rocket"></i>
+                                Navigate
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="automation-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-search"></i> Search Automation</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="search-engine">Search Engine:</label>
+                                <select id="search-engine" class="form-select">
+                                    <option value="google">Google</option>
+                                    <option value="bing">Bing</option>
+                                    <option value="duckduckgo">DuckDuckGo</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="search-query">Search Query:</label>
+                                <input type="text" id="search-query" placeholder="Enter search term" class="form-input">
+                            </div>
+                            <button class="btn btn-primary" onclick="performSearch()">
+                                <i class="fas fa-search"></i>
+                                Search
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="automation-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-edit"></i> Form Automation</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="form-url">Form URL:</label>
+                                <input type="url" id="form-url" placeholder="https://example.com/form" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-data">Form Data (JSON):</label>
+                                <textarea id="form-data" placeholder='{"name": "John", "email": "john@example.com"}' class="form-textarea"></textarea>
+                            </div>
+                            <button class="btn btn-primary" onclick="fillForm()">
+                                <i class="fas fa-paper-plane"></i>
+                                Fill Form
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="automation-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-download"></i> Data Extraction</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="extraction-selectors">CSS Selectors (JSON):</label>
+                                <textarea id="extraction-selectors" placeholder='{"title": "h1", "content": ".content"}' class="form-textarea"></textarea>
+                            </div>
+                            <button class="btn btn-primary" onclick="extractData()">
+                                <i class="fas fa-download"></i>
+                                Extract Data
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testing Section -->
+            <section id="testing" class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-vial"></i> Testing Suite</h2>
+                    <p>Run automated tests and view results</p>
+                </div>
+
+                <div class="testing-controls">
+                    <div class="test-selector">
+                        <h3>Select Test Suite</h3>
+                        <div class="test-options">
+                            <label class="test-option">
+                                <input type="radio" name="test-suite" value="basic" checked>
+                                <span class="test-label">
+                                    <i class="fas fa-play"></i>
+                                    Basic Tests
+                                </span>
+                            </label>
+                            <label class="test-option">
+                                <input type="radio" name="test-suite" value="advanced">
+                                <span class="test-label">
+                                    <i class="fas fa-cog"></i>
+                                    Advanced Tests
+                                </span>
+                            </label>
+                            <label class="test-option">
+                                <input type="radio" name="test-suite" value="custom">
+                                <span class="test-label">
+                                    <i class="fas fa-code"></i>
+                                    Custom Tests
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="test-controls">
+                        <button class="btn btn-success" onclick="runTestSuite()">
+                            <i class="fas fa-play"></i>
+                            Run Test Suite
+                        </button>
+                        <button class="btn btn-warning" onclick="stopTests()">
+                            <i class="fas fa-stop"></i>
+                            Stop Tests
+                        </button>
+                        <button class="btn btn-info" onclick="generateReport()">
+                            <i class="fas fa-file-alt"></i>
+                            Generate Report
+                        </button>
+                    </div>
+                </div>
+
+                <div class="test-results">
+                    <h3>Test Results</h3>
+                    <div id="test-output" class="test-output">
+                        <div class="test-message info">
+                            <i class="fas fa-info-circle"></i>
+                            Ready to run tests. Select a test suite and click "Run Test Suite".
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section id="results" class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-chart-bar"></i> Results & Analytics</h2>
+                    <p>View detailed results and performance metrics</p>
+                </div>
+
+                <div class="results-grid">
+                    <div class="results-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-chart-pie"></i> Performance Overview</h3>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="performanceChart" width="300" height="200"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="results-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-list"></i> Recent Results</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="result-list" id="recent-results">
+                                <div class="result-item success">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Google Search Test - Passed</span>
+                                    <span class="result-time">2 min ago</span>
+                                </div>
+                                <div class="result-item error">
+                                    <i class="fas fa-times-circle"></i>
+                                    <span>Form Automation - Failed</span>
+                                    <span class="result-time">5 min ago</span>
+                                </div>
+                                <div class="result-item success">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Data Extraction - Passed</span>
+                                    <span class="result-time">10 min ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="results-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-download"></i> Export Options</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="export-buttons">
+                                <button class="btn btn-secondary" onclick="exportResults('json')">
+                                    <i class="fas fa-file-code"></i>
+                                    Export JSON
+                                </button>
+                                <button class="btn btn-secondary" onclick="exportResults('csv')">
+                                    <i class="fas fa-file-csv"></i>
+                                    Export CSV
+                                </button>
+                                <button class="btn btn-secondary" onclick="exportResults('html')">
+                                    <i class="fas fa-file-html5"></i>
+                                    Export HTML
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Selenium Automation Hub. Built with ❤️ for web automation.</p>
+                <div class="footer-links">
+                    <a href="#" onclick="showHelp()">Help</a>
+                    <a href="#" onclick="showAbout()">About</a>
+                    <a href="#" onclick="showSettings()">Settings</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Running automation...</p>
+        </div>
+    </div>
+
+    <!-- Notification System -->
+    <div id="notification-container" class="notification-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

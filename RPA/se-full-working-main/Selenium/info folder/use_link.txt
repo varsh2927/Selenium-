@@ -1,0 +1,31 @@
+Simple Web Tools (simple_web_tools.py):
+- https://www.python.org/blogs/         # News scraping demo
+- https://www.google.com               # Connectivity test
+- https://www.python.org               # Connectivity test
+- https://httpbin.org/get              # Connectivity test
+- https://www.github.com               # Connectivity test
+- https://en.wikipedia.org/wiki/List_of_countries_by_population  # Table data scraping
+- https://httpbin.org/status/200       # Web testing demo
+- https://httpbin.org/status/404       # Web testing demo
+- https://httpbin.org/delay/2          # Web testing demo
+
+Web Scraping (web_scraping.py):
+- https://www.python.org/blogs/         # News scraping demo
+- https://en.wikipedia.org/wiki/List_of_countries_by_population  # Table data scraping
+- https://github.com/trending          # Dynamic content scraping (Selenium)
+
+Web Automation (web_automation.py):
+- https://www.google.com                # Google search automation
+- https://httpbin.org/forms/post        # Form automation demo
+- https://www.python.org                # Navigation and interaction demo
+
+Bot Creation (bot_creation.py):
+- https://httpbin.org/forms/post        # Automated form filling
+- https://httpbin.org/robots.txt        # File download example
+- https://httpbin.org/json              # File download example
+
+Working Test (working_test.py, fix_errors.py):
+- https://httpbin.org/get               # HTTP request test
+- https://www.google.com                # Website accessibility test
+- https://www.python.org                # Website accessibility test
+- https://httpbin.org/json              # Website accessibility test 

@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://www.google.com",
+    "status": 200,
+    "accessible": true
+  },
+  {
+    "url": "https://www.python.org",
+    "status": 200,
+    "accessible": true
+  },
+  {
+    "url": "https://httpbin.org/json",
+    "status": 200,
+    "accessible": true
+  }
+]

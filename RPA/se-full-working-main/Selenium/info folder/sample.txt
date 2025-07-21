@@ -1,0 +1,11 @@
+Selenium/
+├── requirements.txt          # All necessary dependencies
+├── README.md                # Comprehensive documentation
+├── run_scripts.py           # Interactive launcher script
+├── web_automation.py        # Web automation script
+├── web_scraping.py          # Web scraping script
+├── bot_creation.py          # Bot creation script
+├── web_testing.py           # Web testing script
+├── bot_create.py            # Your original file
+├── open_test.py             # Your original file
+└── requriment.txt           # Your original file

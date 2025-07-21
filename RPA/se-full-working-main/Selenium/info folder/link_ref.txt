@@ -1,0 +1,36 @@
+# Reference of All Web Links in Project
+# Format: <script>:<line_number> - <URL> [context/usage]
+
+web_automation.py:169 - https://www.google.com        # Google search automation
+web_automation.py:186 - https://httpbin.org/forms/post  # Form automation demo
+web_automation.py:202 - https://www.python.org         # Navigation and interaction demo
+
+web_scraping.py:281 - https://www.python.org/blogs/    # News scraping demo
+web_scraping.py:285 - https://en.wikipedia.org/wiki/List_of_countries_by_population  # Table data scraping
+web_scraping.py:297 - https://github.com/trending      # Dynamic content scraping (Selenium)
+
+simple_web_tools.py:222 - https://www.python.org/blogs/  # News scraping demo
+simple_web_tools.py:229 - https://www.google.com        # Connectivity test
+simple_web_tools.py:229 - https://www.python.org        # Connectivity test
+simple_web_tools.py:229 - https://httpbin.org/get       # Connectivity test
+simple_web_tools.py:229 - https://www.github.com        # Connectivity test
+simple_web_tools.py:246 - https://en.wikipedia.org/wiki/List_of_countries_by_population  # Table data scraping
+simple_web_tools.py:266 - https://www.google.com        # Web testing demo
+simple_web_tools.py:266 - https://www.python.org        # Web testing demo
+simple_web_tools.py:266 - https://httpbin.org/status/200  # Web testing demo
+simple_web_tools.py:266 - https://httpbin.org/status/404  # Web testing demo
+simple_web_tools.py:266 - https://httpbin.org/delay/2     # Web testing demo
+
+bot_creation.py:332 - https://httpbin.org/forms/post     # Automated form filling
+bot_creation.py:347 - https://httpbin.org/robots.txt      # File download example
+bot_creation.py:347 - https://httpbin.org/json            # File download example
+
+working_test.py:13 - https://httpbin.org/get              # HTTP request test
+working_test.py:20 - https://www.google.com               # Website accessibility test
+working_test.py:20 - https://www.python.org               # Website accessibility test
+working_test.py:20 - https://httpbin.org/json             # Website accessibility test
+
+fix_errors.py:13 - https://httpbin.org/get                # HTTP request test
+fix_errors.py:20 - https://www.google.com                 # Website accessibility test
+fix_errors.py:20 - https://www.python.org                 # Website accessibility test
+fix_errors.py:20 - https://httpbin.org/json               # Website accessibility test 
